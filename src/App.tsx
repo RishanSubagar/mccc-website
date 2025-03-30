@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: "white" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* LOGO for larger screens */}
@@ -40,7 +40,7 @@ function App() {
                   fontFamily: "monospace",
                   fontWeight: 700,
                   letterSpacing: ".1rem",
-                  color: "inherit",
+                  color: "black",
                   textDecoration: "none",
                 }}
             >
@@ -53,7 +53,7 @@ function App() {
                   key={section}
                   onClick={handleCloseNavMenu}
                   sx={{ 
-                    my: 2, color: "white", 
+                    my: 2, color: "black", 
                     display: "block", 
                   }}
                 >
@@ -73,7 +73,7 @@ function App() {
                   fontFamily: "monospace",
                   fontWeight: 700,
                   letterSpacing: ".1rem",
-                  color: "inherit",
+                  color: "black",
                   textDecoration: "none",
                 }}
             >
