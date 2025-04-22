@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "ES6", // Target modern JavaScript (ES6+)
+      "module": "ESNext", // Use ESNext modules
+      "strict": false, // Enable strict type-checking
+      "jsx": "react", // Enable JSX for React
+      "moduleResolution": "node", // Resolve modules like Node.js
+      "baseUrl": "./src", // Set the base URL for imports
+      "paths": {
+        "*": ["types/*"] // Include custom type declarations
+      },
+      "allowSyntheticDefaultImports": true
+    },
+    "include": ["src"] // Include all files in the src folder
+  }
