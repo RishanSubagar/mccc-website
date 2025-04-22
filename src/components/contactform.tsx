@@ -58,9 +58,9 @@ function ContactForm() {
                     Contact Us
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    Interested in joining our team, collaborating on a project, or exploring our services? <br />
+                    Interested in collaborating on a project, or exploring our services? <br />
                     Please reach out and let's start the conversation. <br />
-                    (416) 285-9706
+                    (647) 860-5702
                 </Typography>
             </Box>
 
