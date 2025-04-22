@@ -179,32 +179,34 @@ function App() {
           </Box>
         </section>
       </Container>
-      <Box sx={{ width: '100%', backgroundColor: '#f5f5f5', py: 6 }}>
+      <Box sx={{ width: '100%', backgroundColor: 'white', py: 6 }}>
           <section id="about">
             <Typography variant="h4" sx={{ mb: 2 }}>
               Dedicated to Precision, Driven by Excellence
             </Typography>
             <Typography variant="body1" sx={{ mx: 8, textAlign: 'left' }}>
-              We are driven by precision, craftsmanship, and a relentless pursuit of excellence. In our work, attention to detail is non-negotiable, and continuous improvement is a way of life. We believe in earning trust through consistency, delivering high-quality results that exceed expectations. By collaborating closely with clients, suppliers, and team members, we ensure that every project contributes to shared success and long-term partnerships built on reliability and respect
+              M C Centreless Grinding Ltd is driven by precision, craftsmanship, and a relentless pursuit of excellence. In our work, attention to detail is non-negotiable, and continuous improvement is a way of life. We believe in earning trust through consistency, delivering high-quality results that exceed expectations. By collaborating closely with clients, suppliers, and team members, we ensure that every project contributes to shared success and long-term partnerships built on reliability and respect
             </Typography>
           </section>
       </Box>
-      <Container
-        sx={{ 
-          display: 'flex', 
-          justifyContent: 'flex-start',
-          maxWidth: 'lg',
-        }}
-      >
-        <section id="contact">
-          <ContactForm />
-        </section>
-      </Container>
+      <Box sx={{ width: '100%', backgroundColor: "white", py: 6 }}>
+        <Container
+          sx={{ 
+            maxWidth: 'lg',
+          }}
+        >
+          <section id="contact">
+            <ContactForm />
+          </section>
+        </Container>
+      </Box>
       {/* <APIProvider>
         <section id="contact"></section>
       </APIProvider> */}
-      <footer>
-        <h1>Footer</h1>
+      <footer style={{ padding: "20px 0" }}>
+        <Typography variant="body2">
+          1050 Ellesmere Rd. Unit#5 Scarborough, ON M1H 2VA CANADA Phone (416) 285-9706
+        </Typography>
       </footer>
     </div>
   );

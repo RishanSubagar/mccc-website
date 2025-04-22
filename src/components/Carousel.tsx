@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './carousel.css'
 import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -10,7 +10,19 @@ type PropType = {
 
 const Carousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const [emblaRef, emblaApi] = useEmblaCarousel({...options, loop: true})
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    const autoplay = () => {
+        emblaApi.scrollNext() // Scroll to the next slide
+    }
+
+    const interval = setInterval(autoplay, 5000) // Change slides every 3 seconds
+
+    return () => clearInterval(interval) // Cleanup the interval on unmount
+  }, [emblaApi])
 
   return (
     <section className="embla">

@@ -1,81 +1,121 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Textarea from "@mui/joy/Textarea";
 import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 function ContactForm() {
     const [result, setResult] = React.useState("");
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setResult("Sending....");
+        setResult("Sending...");
         const formData = new FormData(event.target);
 
         formData.append("access_key", "b0a9b506-e54c-4922-b827-80a33db9c02a");
 
         const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
+            method: "POST",
+            body: formData
         });
 
         const data = await response.json();
 
         if (data.success) {
-        setResult("Form Submitted Successfully");
-        event.target.reset();
+            setResult("Form submitted successfully!");
+            event.target.reset();
         } else {
-        console.log("Error", data);
-        setResult(data.message);
+            console.log("Error", data);
+            setResult(data.message);
         }
     };
 
     return (
-        <Box 
-            component={"form"} 
-            onSubmit={onSubmit}
+        <Box
             sx={{
                 display: "flex",
-                flexDirection: "column",
-                gap: 3, // Adds consistent spacing between form elements
-                maxWidth: "100%", // Limits the form width
-                mt: 4, // Adds top margin
-                py: 2, // Adds vertical padding
-                px: 4, // Adds horizontal padding
-                boxShadow: 2, // Adds a subtle shadow
-                backgroundColor: "white", // Sets a white background
+                flexDirection: { xs: "column", md: "row" }, // Stack on small screens, side-by-side on larger screens
+                mt: 4,
+                mb: 4,
+                p: 4,
+                borderRadius: 4,
+                gap: 4,
+                alignItems: "flex-start",
+                justifyContent: "space-between",
+                width: "100%",
+                backgroundColor: "whitesmoke",
+                boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
             }}
         >
-        <h2>Contact Us</h2>
-        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 1 }}>
-            <label htmlFor="name">Name:</label>
-            <TextField id="name" label="Name" variant="outlined" required fullWidth />
-        </Box>
-        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 1 }}>
-            <label htmlFor="email">Email:</label>
-            <TextField id="email" label="Email" variant="outlined" required fullWidth />
-        </Box>
-        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 1 }}>
-            <label htmlFor="message">Message:</label>
-            <Textarea
-                id="message"
-                disabled={false}
-                minRows={4}
-                placeholder="Write us a message"
-                size="lg"
-                variant="outlined"
-                required
-                style={{ width: "100%" }}
-            />
-        </Box>
-            <Button 
-                type="submit"
-                sx={{ width: "150px", alignSelf: "center" }}
+            {/* Text Section */}
+            <Box
+                sx={{
+                    flex: 1,
+                    textAlign: "left",
+                }}
             >
-                Submit
-            </Button>
-        <span>{result}</span>
+                <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2 }}>
+                    Contact Us
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                    Interested in joining our team, collaborating on a project, or exploring our services? <br />
+                    Please reach out and let's start the conversation. <br />
+                    (416) 285-9706
+                </Typography>
+            </Box>
+
+            {/* Form Section */}
+            <Box
+                component="form"
+                onSubmit={onSubmit}
+                sx={{
+                    flex: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 3,
+                    borderRadius: 2,
+                }}
+            >
+                <TextField
+                    label="Name"
+                    name="name"
+                    variant="outlined"
+                    required
+                    fullWidth
+                    sx={{ backgroundColor: "white" }}
+                />
+                <TextField
+                    label="Email"
+                    name="email"
+                    type="email"
+                    variant="outlined"
+                    required
+                    fullWidth
+                    sx={{ backgroundColor: "white" }}
+                />
+                <TextField
+                    label="Message"
+                    name="message"
+                    variant="outlined"
+                    required
+                    fullWidth
+                    multiline
+                    rows={4}
+                    sx={{ backgroundColor: "white" }}
+                />
+                <Button
+                    type="submit"
+                    variant="outlined"
+                    sx={{ width: "150px", alignSelf: "center", backgroundColor: "lightslategray", color: "white", "&:hover": { backgroundColor: "black" } }}
+                >
+                    Submit
+                </Button>
+                <Typography variant="body2" color="text.secondary" textAlign="center">
+                    {result}
+                </Typography>
+            </Box>
         </Box>
     );
 }
+
 export default ContactForm;
