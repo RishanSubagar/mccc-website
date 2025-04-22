@@ -1,4 +1,4 @@
-import { Button, Container, Typography } from "@mui/material";
+import { Button, Container, Typography, Grid } from "@mui/material";
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -147,36 +147,155 @@ function App() {
         sx={{ padding: 0 }}
       >
         <section id="display" style={{ position: "relative", width: "100%" }}>
-          {/* Text Content */}
-          <Box
-            sx={{
-              position: "absolute", // Position the text on top of the slideshow
-              top: "50%", // Center vertically
-              left: "50%", // Center horizontally
-              transform: "translate(-50%, -50%)", // Adjust for centering
-              zIndex: 2, // Ensure the text is above the slideshow
-              textAlign: "center",
-              color: "white", // Make the text visible on top of the slideshow
-            }}
-          >
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              Precision in Every Detail
-            </Typography>
-            <Typography variant="body1" sx={{ mt: 2 }}>
-              Your Trusted Partner in Centerless Grinding
-            </Typography>
-          </Box>
-
-          {/* Slideshow */}
-          <Box
-            sx={{
-              width: "100%", // Full width of the page
-              height: "500px", // Set the height of the slideshow
-              overflow: "hidden", // Hide any overflow
-            }}
-          >
-            <Carousel slides={SLIDES} options={OPTIONS} />
-          </Box>
+            {/* Text Content */}
+            <Box
+              sx={{
+                position: "absolute", // Position the text on top of the slideshow
+                top: "50%", // Center vertically
+                left: "50%", // Center horizontally
+                transform: "translate(-50%, -50%)", // Adjust for centering
+                zIndex: 2,
+                textAlign: "center",
+                color: "white",
+              }}
+            >
+              <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                Precision in Every Detail
+              </Typography>
+              <Typography variant="body1" sx={{ mt: 2 }}>
+                Your Trusted Partner in Centerless Grinding
+              </Typography>
+            </Box>
+            {/* Opaque Layer */}
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                backgroundColor: "rgba(0, 0, 0, 0.35)",
+                zIndex: 1,
+                pointerEvents: "none", // Allow interaction with underlying elements
+              }}
+            />
+            {/* Slideshow */}
+            <Box
+              sx={{
+                width: "100%", // Full width of the page
+                height: "500px", // Set the height of the slideshow
+                overflow: "hidden",
+                zIndex: 0,
+              }}
+            >
+              <Carousel slides={SLIDES} options={OPTIONS} />
+            </Box>
+        </section>
+        {/* Services Section */}
+        <section id="services">
+            <Box 
+              sx={{ 
+                width: "100%", 
+                backgroundColor: "whitesmoke", 
+                py: 6, 
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <Container maxWidth="lg">
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    mb: 4,
+                  }}
+                >
+                  Our Services
+                </Typography>
+                <Grid 
+                  container 
+                  spacing={4}
+                  rowSpacing={10}
+                  direction="row"
+                  sx={{
+                    justifyContent: "center",
+                    alignItems: "stretch",
+                    margin: 0,
+                  }}
+                >
+                    {/* Service 1 */}
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                      <Box
+                        sx={{
+                          backgroundColor: "white",
+                          p: 4,
+                          borderRadius: 2,
+                          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                          height: "100%",
+                          maxWidth: "300px",
+                          margin: "0 auto", // Center the box horizontally
+                          textAlign: "center",
+                        }}
+                      >
+                        <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                          Industries We Serve
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          We work with clients from a variety of industries that require finished parts
+                          with tight tolerances.
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    {/* Service 2 */}
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                      <Box
+                        sx={{
+                          backgroundColor: "white",
+                          p: 4,
+                          borderRadius: 2,
+                          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                          height: "100%",
+                          maxWidth: "300px",
+                          margin: "0 auto",
+                          textAlign: "center",
+                        }}
+                      >
+                        <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                          Precision Grinding
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          We specialize in high-precision grinding to meet demanding specifications. 
+                          Our services are also available to support other machine shops and steel warehouses.
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    {/* Service 3 */}
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                      <Box
+                        sx={{
+                          backgroundColor: "white",
+                          p: 4,
+                          borderRadius: 2,
+                          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                          height: "100%",
+                          maxWidth: "300px",
+                          margin: "0 auto",
+                          textAlign: "center",
+                        }}
+                      >
+                        <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
+                          More Capabilities
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Range of additional capabilities,
+                          including Bar Grinding, Plunge Grinding, and Surface Grinding.
+                        </Typography>
+                      </Box>
+                    </Grid>
+                </Grid>
+              </Container>
+            </Box>
         </section>
       </Container>
       <Box sx={{ width: '100%', backgroundColor: 'white', py: 6 }}>
