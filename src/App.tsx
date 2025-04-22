@@ -183,7 +183,7 @@ function App() {
             <Box
               sx={{
                 width: "100%", // Full width of the page
-                height: "500px", // Set the height of the slideshow
+                height: "600px", // Set the height of the slideshow
                 overflow: "hidden",
                 zIndex: 0,
               }}
@@ -197,12 +197,13 @@ function App() {
               sx={{ 
                 width: "100%", 
                 backgroundColor: "whitesmoke", 
-                py: 6, 
+                paddingTop: 8, 
+                paddingBottom: 6,
                 display: "flex",
                 flexDirection: "column",
               }}
             >
-              <Container maxWidth="lg">
+              <Container maxWidth="lg" sx={{ height: "350px" }}>
                 <Typography
                   variant="h4"
                   sx={{
@@ -303,7 +304,7 @@ function App() {
             <Typography variant="h4" sx={{ mb: 2 }}>
               Dedicated to Precision, Driven by Excellence
             </Typography>
-            <Typography variant="body1" sx={{ mx: 8, textAlign: 'left' }}>
+            <Typography variant="body1" sx={{ mx: 8, textAlign: 'center' }}>
               M C Centreless Grinding Ltd is driven by precision, craftsmanship, and a relentless pursuit of excellence. In our work, attention to detail is non-negotiable, and continuous improvement is a way of life. We believe in earning trust through consistency, delivering high-quality results that exceed expectations. By collaborating closely with clients, suppliers, and team members, we ensure that every project contributes to shared success and long-term partnerships built on reliability and respect
             </Typography>
           </section>
