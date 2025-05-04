@@ -11,9 +11,9 @@ import React from "react";
 import Carousel from "./components/carousel"; 
 import { EmblaOptionsType } from 'embla-carousel'
 
-import {
-  APIProvider
-} from "@vis.gl/react-google-maps";
+// import {
+//   APIProvider
+// } from "@vis.gl/react-google-maps";
 import ContactForm from "./components/contactform";
 
 import img1 from "./imgs/img1.png";
