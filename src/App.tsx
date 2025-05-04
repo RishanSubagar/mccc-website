@@ -51,7 +51,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{ overflowX: "hidden" }}>
       <AppBar position="static" sx={{ backgroundColor: "white" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -102,17 +102,18 @@ function App() {
                   letterSpacing: ".1rem",
                   color: "black",
                   textDecoration: "none",
+                  fontSize: { xs: "0.8rem", sm: "1rem" }, // Adjust font size for smaller screens
                 }}
             >
               M C Centerless Grinding Ltd
             </Typography>
             {/* Mobile Menu Button (only for small screens) */}
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box sx={{ display: { xs: "flex", md: "none" }, ml: "auto" }}>
               <IconButton
                 size="large"
                 aria-label="open menu"
                 onClick={handleOpenNavMenu}
-                color="inherit"
+                sx={{ color: "black", ml: "auto" }}
               >
                 <MenuIcon />
               </IconButton>
