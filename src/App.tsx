@@ -198,12 +198,12 @@ function App() {
                 width: "100%", 
                 backgroundColor: "whitesmoke", 
                 paddingTop: 8, 
-                paddingBottom: 6,
+                paddingBottom: 16,
                 display: "flex",
                 flexDirection: "column",
               }}
             >
-              <Container maxWidth="lg" sx={{ height: "350px" }}>
+              <Container maxWidth="lg" sx={{ height: "auto" }}>
                 <Typography
                   variant="h4"
                   sx={{
