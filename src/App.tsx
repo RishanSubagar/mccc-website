@@ -16,6 +16,7 @@ import { EmblaOptionsType } from 'embla-carousel'
 // } from "@vis.gl/react-google-maps";
 import ContactForm from "./components/contactform";
 
+import logo from "./imgs/logo.png";
 import img1 from "./imgs/img1.png";
 import img2 from "./imgs/img2.png";
 import img3 from "./imgs/img3.png";
@@ -73,6 +74,23 @@ function App() {
             >
               M C Centerless Grinding Ltd
             </Typography>
+            {/* <Box
+              component="a"
+              href="/"
+              sx={{
+                display: { xs: "none", md: "flex" },
+                alignItems: "center",
+                mr: 2,
+                textDecoration: "none",
+              }}
+            >
+              <Box
+                component="img"
+                src={logo}
+                alt="M C Centerless Grinding Ltd"
+                sx={{ height: 48 }} // Adjust height as needed
+              />
+            </Box> */}
             {/* Menu items for larger screens */}
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, justifyContent: "flex-end" }}>
               {sections.map((section) => (
@@ -300,6 +318,41 @@ function App() {
             </Box>
         </section>
       </Container>
+      <section id="body-section">
+      <Container maxWidth="lg" sx={{ py: 8 }}>
+        <Grid container spacing={4} alignItems="center">
+          {/* Photo on the left */}
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Box
+              component="img"
+              src={img1} // Replace with your desired image
+              alt="Descriptive Alt Text"
+              sx={{
+                width: "100%",
+                borderRadius: 2,
+                boxShadow: 2,
+                objectFit: "cover",
+                maxHeight: 400,
+              }}
+            />
+          </Grid>
+          {/* Text on the right */}
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Box sx={{ px: { xs: 0, md: 4 } }}>
+              <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2 }}>
+                About Our Company
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
+                M C Centerless Grinding Ltd has been providing precision grinding services for decades.
+                Our experienced team and advanced equipment ensure the highest quality for every project.
+                We serve a wide range of industries and pride ourselves on our attention to detail and customer satisfaction.
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </section>
+      {/* About Section */}
       <Box sx={{ width: '100%', backgroundColor: 'white', py: 6 }}>
           <section id="about">
             <Typography variant="h4" sx={{ mb: 2 }}>
