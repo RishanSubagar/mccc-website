@@ -51,8 +51,8 @@ function App() {
   }
 
   return (
-    <div className="App" style={{ overflowX: "hidden" }}>
-      <AppBar position="static" sx={{ backgroundColor: "white" }}>
+    <div className="App">
+      <AppBar position="sticky" sx={{ backgroundColor: "white" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* LOGO for larger screens */}
@@ -145,7 +145,7 @@ function App() {
       <Container
         maxWidth={false}
         disableGutters
-        sx={{ padding: 0 }}
+        sx={{ padding: 0, overflow: "hidden" }}
       >
         <section id="display" style={{ position: "relative", width: "100%" }}>
             {/* Text Content */}
