@@ -127,7 +127,6 @@ function App() {
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
-                fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".1rem",
                 color: "black",
@@ -135,7 +134,7 @@ function App() {
                 fontSize: { xs: "0.8rem", sm: "1rem" }, // Adjust font size for smaller screens
               }}
             >
-              M C Centerless Grinding Ltd
+              M C CENTERLESS GRINDING LTD
             </Typography>
             {/* Mobile Menu Button (only for small screens) */}
             <Box sx={{ display: { xs: "flex", md: "none" }, ml: "auto" }}>

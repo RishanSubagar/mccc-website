@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
 .App-header {
@@ -16,4 +17,3 @@
 .App-link {
   color: #61dafb;
 }
-
