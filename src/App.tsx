@@ -443,7 +443,7 @@ function App() {
       </APIProvider> */}
       <footer style={{ padding: "20px 0" }}>
         <Typography variant="body2">
-          1050 Ellesmere Rd. Unit#5 Scarborough, ON M1H 2VA CANADA Phone (416)
+          1950 Ellesmere Rd. Unit#5 Scarborough, ON M1H 2VA CANADA Phone (416)
           285-9706
         </Typography>
       </footer>
