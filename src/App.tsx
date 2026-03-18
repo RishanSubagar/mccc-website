@@ -444,7 +444,7 @@ function App() {
       <footer style={{ padding: "20px 0" }}>
         <Typography variant="body2">
           1950 Ellesmere Rd. Unit#5 Scarborough, ON M1H 2VA CANADA Phone (416)
-          285-9706
+          285-7906
         </Typography>
       </footer>
     </div>
