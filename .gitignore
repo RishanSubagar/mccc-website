@@ -15,6 +15,7 @@ build/logo192.png
 .gitignore
 build/logo512.png
 .gitignore
+firebase-debug.log
 .gitignore
 build/manifest.json
 build/robots.txt
