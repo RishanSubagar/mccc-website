@@ -15,7 +15,7 @@ build/logo192.png
 .gitignore
 build/logo512.png
 .gitignore
-firebase-debug.log
+/firebase-debug.log
 .gitignore
 build/manifest.json
 build/robots.txt
@@ -31,3 +31,4 @@ build/static/media/img2.8155e52408f4fac85cd5.png
 build/static/media/img3.404caf2d8e6288ac5ec1.png
 build/static/media/img4.34fb6b5ffdca79a94f9b.png
 build/static/media/img5.508fe302457dafe327df.png
+/build
